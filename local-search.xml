@@ -4,6 +4,63 @@
   
   
   <entry>
+    <title>搭建个人网站 - 如何从零开始基于 hexo + github pages 搭建个人网站</title>
+    <link href="/2024/10/05/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%991/"/>
+    <url>/2024/10/05/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%991/</url>
+    
+    <content type="html"><![CDATA[<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>本文提供了从零开始，基于 hexo 和 github pages 搭建个人静态网站的步骤。</p><blockquote><p>由于网上已经有很多资源了，所以对于一些基础的准备工作下面直接用链接替代。</p></blockquote><h2 id="2-准备工作"><a href="#2-准备工作" class="headerlink" title="2. 准备工作"></a>2. 准备工作</h2><blockquote><p>下面操作仅针对 Mac 测试。</p></blockquote><ol><li>安装配置 Homebrew，参考：</li></ol><ul><li><a href="https://zhuanlan.zhihu.com/p/372576355">https://zhuanlan.zhihu.com/p/372576355</a></li><li><a href="https://blog.csdn.net/weixin_41317840/article/details/128751211">https://blog.csdn.net/weixin_41317840&#x2F;article&#x2F;details&#x2F;128751211</a></li></ul><ol start="2"><li>安装配置 Node.js 和 npm，参考：</li></ol><ul><li><a href="https://blog.csdn.net/weixin_41317840/article/details/128756634">https://blog.csdn.net/weixin_41317840&#x2F;article&#x2F;details&#x2F;128756634</a></li></ul><blockquote><p>输入 <code>node -v</code> 和 <code>npm -v</code> 查看是否安装成功。</p></blockquote><ol start="3"><li>安装 hexo，参考 <a href="https://hexo.io/zh-cn/docs/">hexo 官网</a>。</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>个人网站</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>搭建个人网站 - Fluid 主题配置修改</title>
+    <link href="/2024/10/05/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%992/"/>
+    <url>/2024/10/05/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%992/</url>
+    
+    <content type="html"><![CDATA[<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>本文提供了如何修改 hexo 主题 Fluid 的配置。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>个人网站</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>搭建个人网站 - cloudflare 加速 github 访问</title>
+    <link href="/2024/10/05/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%993/"/>
+    <url>/2024/10/05/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%993/</url>
+    
+    <content type="html"><![CDATA[<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>对于大陆用户，当访问 github 时，经常会遇到访问速度慢的问题。本文提供采用 cloudflare 加速 github page 访问的方法。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>个人网站</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Hello World</title>
     <link href="/2024/10/03/hello-world/"/>
     <url>/2024/10/03/hello-world/</url>
