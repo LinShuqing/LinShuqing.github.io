@@ -4,16 +4,16 @@
   
   
   <entry>
-    <title>搭建个人网站 - 如何从零开始基于 hexo + github pages 搭建个人网站</title>
-    <link href="/2024/10/05/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%991/"/>
-    <url>/2024/10/05/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%991/</url>
+    <title>todo</title>
+    <link href="/2024/10/05/todo/"/>
+    <url>/2024/10/05/todo/</url>
     
-    <content type="html"><![CDATA[<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>本文提供了从零开始，基于 hexo 和 github pages 搭建个人静态网站的步骤。</p><blockquote><p>由于网上已经有很多资源了，所以对于一些基础的准备工作下面直接用链接替代。</p></blockquote><h2 id="2-准备工作"><a href="#2-准备工作" class="headerlink" title="2. 准备工作"></a>2. 准备工作</h2><blockquote><p>下面操作仅针对 Mac 测试。</p></blockquote><ol><li>安装配置 Homebrew，参考：</li></ol><ul><li><a href="https://zhuanlan.zhihu.com/p/372576355">https://zhuanlan.zhihu.com/p/372576355</a></li><li><a href="https://blog.csdn.net/weixin_41317840/article/details/128751211">https://blog.csdn.net/weixin_41317840&#x2F;article&#x2F;details&#x2F;128751211</a></li></ul><ol start="2"><li>安装配置 Node.js 和 npm，参考：</li></ol><ul><li><a href="https://blog.csdn.net/weixin_41317840/article/details/128756634">https://blog.csdn.net/weixin_41317840&#x2F;article&#x2F;details&#x2F;128756634</a></li></ul><blockquote><p>输入 <code>node -v</code> 和 <code>npm -v</code> 查看是否安装成功。</p></blockquote><ol start="3"><li>安装 hexo，参考 <a href="https://hexo.io/zh-cn/docs/">hexo 官网</a>。</li></ol>]]></content>
+    <content type="html"><![CDATA[<p>本博客的一些 todo list：<br>[ ] 教程：使用 AI 工具生成网站首页图、封面、logo 等<br>[ ] 分享一些工具<br>[ ] 优化 tags 和 categories</p>]]></content>
     
     
     <categories>
       
-      <category>个人网站</category>
+      <category>其他</category>
       
     </categories>
     
@@ -47,6 +47,25 @@
     <url>/2024/10/05/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%993/</url>
     
     <content type="html"><![CDATA[<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>对于大陆用户，当访问 github 时，经常会遇到访问速度慢的问题。本文提供采用 cloudflare 加速 github page 访问的方法。</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>个人网站</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>搭建个人网站 - 如何从零开始基于 hexo + github pages 搭建个人网站</title>
+    <link href="/2024/10/05/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%991/"/>
+    <url>/2024/10/05/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%991/</url>
+    
+    <content type="html"><![CDATA[<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>本文提供了从零开始，基于 hexo 和 github pages 搭建个人静态网站的步骤。</p><blockquote><p>由于网上已经有很多资源了，所以对于一些基础的准备工作下面直接用链接替代。同时下面的操作假设用户已经熟悉 git 并且已经有 github 账号。</p></blockquote><h2 id="2-准备工作"><a href="#2-准备工作" class="headerlink" title="2. 准备工作"></a>2. 准备工作</h2><blockquote><p>下面操作仅针对 Mac 测试。</p></blockquote><ol><li>安装配置 Homebrew，参考：</li></ol><ul><li><a href="https://zhuanlan.zhihu.com/p/372576355">https://zhuanlan.zhihu.com/p/372576355</a></li><li><a href="https://blog.csdn.net/weixin_41317840/article/details/128751211">https://blog.csdn.net/weixin_41317840&#x2F;article&#x2F;details&#x2F;128751211</a></li></ul><ol start="2"><li>安装配置 Node.js 和 npm，参考：</li></ol><ul><li><a href="https://blog.csdn.net/weixin_41317840/article/details/128756634">https://blog.csdn.net/weixin_41317840&#x2F;article&#x2F;details&#x2F;128756634</a></li></ul><blockquote><p>输入 <code>node -v</code> 和 <code>npm -v</code> 查看是否安装成功。</p></blockquote><h2 id="3-安装-hexo"><a href="#3-安装-hexo" class="headerlink" title="3. 安装 hexo"></a>3. 安装 hexo</h2><blockquote><p>安装教程参考 <a href="https://hexo.io/zh-cn/docs/">hexo 官网</a>。</p></blockquote><p>采用 npm 安装 hexo：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g hexo-cli<br></code></pre></td></tr></table></figure><blockquote><p>如果遇到 npm 安装慢的问题，可以修改 npm 的源，参考 <a href="https://blog.csdn.net/qq_43940789/article/details/131449710">国内npm源镜像</a>。</p></blockquote><blockquote><p>安装完成后，输入 <code>hexo -v</code> 查看是否安装成功。</p></blockquote>]]></content>
     
     
     <categories>
