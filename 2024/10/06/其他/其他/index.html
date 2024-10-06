@@ -27,7 +27,7 @@
 <meta property="og:description" content="其他细节  对于一些全局资源文件，如图片，可以将其存在 source 文件夹下，且引用的时候用 &#x2F; 开头，如对于存放在 source 文件夹下的图片 source&#x2F;imgs&#x2F;1.jpg，在 markdown 文件中引用为 ![图片标题](&#x2F;imgs&#x2F;1.jpg)。 对于一篇 post 的专属资源文件，如图片，可以打开 _config.yml 文件，找到 post_asset_folder，将其设置">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-10-06T13:00:09.000Z">
-<meta property="article:modified_time" content="2024-10-06T13:48:47.707Z">
+<meta property="article:modified_time" content="2024-10-06T14:56:59.741Z">
 <meta property="article:author" content="Shuqing Lin">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -229,7 +229,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          159 字
+          234 字
         
       </span>
     
@@ -286,6 +286,11 @@
 <ol>
 <li>对于一些全局资源文件，如图片，可以将其存在 source 文件夹下，且引用的时候用 <code>/</code> 开头，如对于存放在 source 文件夹下的图片 <code>source/imgs/1.jpg</code>，在 markdown 文件中引用为 <code>![图片标题](/imgs/1.jpg)</code>。</li>
 <li>对于一篇 post 的专属资源文件，如图片，可以打开 <code>_config.yml</code> 文件，找到 <code>post_asset_folder</code>，将其设置为 <code>true</code>，这样在每次新建 post 的时候，会自动在 post 文件夹下创建一个同名文件夹，用于存放 post 的专属资源文件，引用时，可以直接使用 <code>![图片标题](1.jpg)</code>。</li>
+</ol>
+<blockquote>
+<p>注意：如果安装插件 <code>hexo-asset-img</code>，则可以在 post 文件夹下的一个同名文件夹（需要设置 <code>post_asset_folder</code> 为 <code>true</code>，用于存放 post 的专属资源文件）中，使用 <code>![图片标题](&lt;blog_name&gt;1.jpg)</code> 来确保 markdown 也能实时预览图片，参考 <a target="_blank" rel="noopener" href="https://github.com/yiyungent/hexo-asset-img/blob/main/README_zh.md">hexo-asset-img</a>。</p>
+</blockquote>
+<ol start="3">
 <li>如何</li>
 </ol>
 
