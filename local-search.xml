@@ -4,11 +4,49 @@
   
   
   <entry>
+    <title>我修改的配置</title>
+    <link href="/2024/10/06/%E6%88%91%E4%BF%AE%E6%94%B9%E7%9A%84%E9%85%8D%E7%BD%AE/"/>
+    <url>/2024/10/06/%E6%88%91%E4%BF%AE%E6%94%B9%E7%9A%84%E9%85%8D%E7%BD%AE/</url>
+    
+    <content type="html"><![CDATA[<h2 id="config-yml-配置"><a href="#config-yml-配置" class="headerlink" title="_config.yml 配置"></a><code>_config.yml</code> 配置</h2><p><code>post_asset_folder</code>：原始默认为 <code>false</code>，修改为 <code>true</code>，这样在每次新建 post 的时候，会自动在 post 文件夹下创建一个同名文件夹，用于存放 post 的专属资源文件。</p><h2 id="config-fluid-yml-主题配置"><a href="#config-fluid-yml-主题配置" class="headerlink" title="_config.fluid.yml 主题配置"></a><code>_config.fluid.yml</code> 主题配置</h2>]]></content>
+    
+    
+    <categories>
+      
+      <category>个人网站</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>其他</title>
+    <link href="/2024/10/06/%E5%85%B6%E4%BB%96/"/>
+    <url>/2024/10/06/%E5%85%B6%E4%BB%96/</url>
+    
+    <content type="html"><![CDATA[<h2 id="其他细节"><a href="#其他细节" class="headerlink" title="其他细节"></a>其他细节</h2><ol><li>对于一些全局资源文件，如图片，可以将其存在 source 文件夹下，且引用的时候用 <code>/</code> 开头，如对于存放在 source 文件夹下的图片 <code>source/imgs/1.jpg</code>，在 markdown 文件中引用为 <code>![图片标题](/imgs/1.jpg)</code>。</li><li>对于一篇 post 的专属资源文件，如图片，可以打开 <code>_config.yml</code> 文件，找到 <code>post_asset_folder</code>，将其设置为 <code>true</code>，这样在每次新建 post 的时候，会自动在 post 文件夹下创建一个同名文件夹，用于存放 post 的专属资源文件。</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>其他</category>
+      
+    </categories>
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>todo</title>
     <link href="/2024/10/05/todo/"/>
     <url>/2024/10/05/todo/</url>
     
-    <content type="html"><![CDATA[<p>本博客的一些 todo list：<br>[ ] 教程：使用 AI 工具生成网站首页图、封面、logo 等<br>[ ] 分享一些工具<br>[ ] 优化 tags 和 categories</p>]]></content>
+    <content type="html"><![CDATA[<p>本博客的一些 todo list：<br>[ ] 教程：使用 AI 工具生成网站首页图、封面、logo 等<br>[ ] 分享一些工具<br>[ ] 优化 tags 和 categories<br>[ ] 如何添加图片、如何对文件夹进行分类</p>]]></content>
     
     
     <categories>
@@ -65,7 +103,7 @@
     <link href="/2024/10/05/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%991/"/>
     <url>/2024/10/05/%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E7%BD%91%E7%AB%991/</url>
     
-    <content type="html"><![CDATA[<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>本文提供了从零开始，基于 hexo 和 github pages 搭建个人静态网站的步骤。</p><blockquote><p>由于网上已经有很多资源了，所以对于一些基础的准备工作下面直接用链接替代。同时下面的操作假设用户已经熟悉 git 并且已经有 github 账号。</p></blockquote><h2 id="2-准备工作"><a href="#2-准备工作" class="headerlink" title="2. 准备工作"></a>2. 准备工作</h2><blockquote><p>下面操作仅针对 Mac 测试。</p></blockquote><ol><li>安装配置 Homebrew，参考：</li></ol><ul><li><a href="https://zhuanlan.zhihu.com/p/372576355">https://zhuanlan.zhihu.com/p/372576355</a></li><li><a href="https://blog.csdn.net/weixin_41317840/article/details/128751211">https://blog.csdn.net/weixin_41317840&#x2F;article&#x2F;details&#x2F;128751211</a></li></ul><ol start="2"><li>安装配置 Node.js 和 npm，参考：</li></ol><ul><li><a href="https://blog.csdn.net/weixin_41317840/article/details/128756634">https://blog.csdn.net/weixin_41317840&#x2F;article&#x2F;details&#x2F;128756634</a></li></ul><blockquote><p>输入 <code>node -v</code> 和 <code>npm -v</code> 查看是否安装成功。</p></blockquote><h2 id="3-安装-hexo"><a href="#3-安装-hexo" class="headerlink" title="3. 安装 hexo"></a>3. 安装 hexo</h2><blockquote><p>安装教程参考 <a href="https://hexo.io/zh-cn/docs/">hexo 官网</a>。</p></blockquote><p>采用 npm 安装 hexo：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g hexo-cli<br></code></pre></td></tr></table></figure><blockquote><p>如果遇到 npm 安装慢的问题，可以修改 npm 的源，参考 <a href="https://blog.csdn.net/qq_43940789/article/details/131449710">国内npm源镜像</a>。</p></blockquote><blockquote><p>安装完成后，输入 <code>hexo -v</code> 查看是否安装成功。</p></blockquote>]]></content>
+    <content type="html"><![CDATA[<h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h2><p>本文提供了从零开始，基于 hexo 和 github pages 搭建个人静态网站的步骤。</p><blockquote><p>由于网上已经有很多资源了，所以对于一些基础的准备工作下面直接用链接替代。同时下面的操作假设用户已经熟悉 git 并且已经有 github 账号。</p></blockquote><h2 id="2-准备工作"><a href="#2-准备工作" class="headerlink" title="2. 准备工作"></a>2. 准备工作</h2><blockquote><p>下面操作仅针对 Mac 测试。</p></blockquote><ol><li>安装配置 Homebrew，参考：</li></ol><ul><li><a href="https://zhuanlan.zhihu.com/p/372576355">https://zhuanlan.zhihu.com/p/372576355</a></li><li><a href="https://blog.csdn.net/weixin_41317840/article/details/128751211">https://blog.csdn.net/weixin_41317840&#x2F;article&#x2F;details&#x2F;128751211</a></li></ul><ol start="2"><li>安装配置 Node.js 和 npm，参考：</li></ol><ul><li><a href="https://blog.csdn.net/weixin_41317840/article/details/128756634">https://blog.csdn.net/weixin_41317840&#x2F;article&#x2F;details&#x2F;128756634</a></li></ul><blockquote><p>输入 <code>node -v</code> 和 <code>npm -v</code> 查看是否安装成功。</p></blockquote><h2 id="3-安装并创建-hexo-项目"><a href="#3-安装并创建-hexo-项目" class="headerlink" title="3. 安装并创建 hexo 项目"></a>3. 安装并创建 hexo 项目</h2><blockquote><p>安装教程参考 <a href="https://hexo.io/zh-cn/docs/">hexo 官网</a>。</p></blockquote><p>采用 npm 安装 hexo：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g hexo-cli<br></code></pre></td></tr></table></figure><blockquote><p>如果遇到 npm 安装慢的问题，可以修改 npm 的源，参考 <a href="https://blog.csdn.net/qq_43940789/article/details/131449710">国内npm源镜像</a>。</p></blockquote><blockquote><p>安装完成后，输入 <code>hexo -v</code> 查看是否安装成功。</p></blockquote><p>成功安装 hexo 后，即可创建 hexo 项目：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo init &lt;blog_name&gt;<br><span class="hljs-built_in">cd</span> &lt;blog_name&gt;<br>npm install<br></code></pre></td></tr></table></figure><blockquote><p>上面的 <code>&lt;blog_name&gt;</code> 为博客所在的文件夹名。</p></blockquote><p>上面完成配置后，可以通过，即可在本地查看静态网站：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs bash"><span class="hljs-comment"># 生成静态文件</span><br>hexo generate<br><span class="hljs-comment"># 或者简写为 hexo g</span><br><br><span class="hljs-comment"># 启动本地服务</span><br>hexo server<br><span class="hljs-comment"># 或者简写为 hexo s</span><br></code></pre></td></tr></table></figure><h2 id="4-github-pages-配置"><a href="#4-github-pages-配置" class="headerlink" title="4. github pages 配置"></a>4. github pages 配置</h2><p>完成上述配置只是可以在本地查看静态网站，接下来需要将静态网站部署到 github pages 上，从而可以通过域名访问。</p><p>假设已经有了 github 账号，接下来创建一个新的 repository，名字为 <code>&lt;username&gt;.github.io</code>，其中 <code>&lt;username&gt;</code> 为 github 用户名。</p><p>下面开始配置 hexo 项目，这里采用最简单的 <a href="https://hexo.io/zh-cn/docs/one-command-deployment">一键部署</a>：</p><blockquote><p>一键部署不会将源文件上传到 github，只会将生成的静态页面文件上传到 github。</p></blockquote><p>首先安装 hexo-deployer-git：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-deployer-git --save<br></code></pre></td></tr></table></figure><p>然后在路径下的 <code>_config.yml</code> 文件中配置：</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">deploy:</span><br>    <span class="hljs-attr">type:</span> <span class="hljs-string">git</span><br>    <span class="hljs-attr">repo:</span> <span class="hljs-string">&lt;repository</span> <span class="hljs-string">url&gt;</span> <span class="hljs-comment"># 仓库地址</span><br>    <span class="hljs-attr">branch:</span> [<span class="hljs-string">branch</span>]<br>    <span class="hljs-attr">message:</span> [<span class="hljs-string">message</span>]<br></code></pre></td></tr></table></figure><blockquote><p>其中 <code>&lt;repository url&gt;</code> 为 <code>&lt;username&gt;.github.io</code> 的仓库地址。这里的地址可以是 <code>http url</code> 或者 <code>ssh url</code>：</p><ul><li>如果是 <code>http url</code>：deploy 时会要求输入 github 用户名和密码。</li><li>如果是 <code>ssh url</code>：可以先在 github 中添加本机的 ssh key，实现免密 deploy。</li></ul></blockquote>]]></content>
     
     
     <categories>
