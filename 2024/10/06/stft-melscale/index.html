@@ -19,25 +19,25 @@
   <meta name="author" content="Shuqing Lin">
   <meta name="keywords" content="">
   
-    <meta name="description" content="torch 中的 stft、torchaudio 中的 Spectrogram、Melscale、MelSpectrogram 的使用torch.stft()1output &#x3D; torch.stft(input, n_fft, hop_length&#x3D;None, win_length&#x3D;None, window&#x3D;None, center&#x3D;True, pad_mode&#x3D;&#x27;reflect&amp;#x2">
+    <meta name="description" content="torch.stft()1output &#x3D; torch.stft(input, n_fft, hop_length&#x3D;None, win_length&#x3D;None, window&#x3D;None, center&#x3D;True, pad_mode&#x3D;&#x27;reflect&#x27;, normalized&#x3D;False, onesided&#x3D;None, return_complex&#x3D;None)  简介：短时傅里叶">
 <meta property="og:type" content="article">
 <meta property="og:title" content="torch 中的 stft、torchaudio 中的 Spectrogram、Melscale、MelSpectrogram 的使用">
-<meta property="og:url" content="https://www.linshuqing.top/2024/10/06/%E7%A7%91%E7%A0%94%E5%AD%A6%E6%9C%AF/stft-melscale/index.html">
+<meta property="og:url" content="https://www.linshuqing.top/2024/10/06/stft-melscale/index.html">
 <meta property="og:site_name" content="linshuqing 的个人博客">
-<meta property="og:description" content="torch 中的 stft、torchaudio 中的 Spectrogram、Melscale、MelSpectrogram 的使用torch.stft()1output &#x3D; torch.stft(input, n_fft, hop_length&#x3D;None, win_length&#x3D;None, window&#x3D;None, center&#x3D;True, pad_mode&#x3D;&#x27;reflect&amp;#x2">
+<meta property="og:description" content="torch.stft()1output &#x3D; torch.stft(input, n_fft, hop_length&#x3D;None, win_length&#x3D;None, window&#x3D;None, center&#x3D;True, pad_mode&#x3D;&#x27;reflect&#x27;, normalized&#x3D;False, onesided&#x3D;None, return_complex&#x3D;None)  简介：短时傅里叶">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://www.linshuqing.top/_posts/%E7%A7%91%E7%A0%94%E5%AD%A6%E6%9C%AF/stft-melscale/stft-melscale/1658904252722.png">
-<meta property="og:image" content="https://www.linshuqing.top/_posts/%E7%A7%91%E7%A0%94%E5%AD%A6%E6%9C%AF/stft-melscale/stft-melscale/1658906639628.png">
-<meta property="og:image" content="https://www.linshuqing.top/_posts/%E7%A7%91%E7%A0%94%E5%AD%A6%E6%9C%AF/stft-melscale/stft-melscale/1658906997678.png">
-<meta property="og:image" content="https://www.linshuqing.top/_posts/%E7%A7%91%E7%A0%94%E5%AD%A6%E6%9C%AF/stft-melscale/stft-melscale/1658888255212.png">
-<meta property="og:image" content="https://www.linshuqing.top/_posts/%E7%A7%91%E7%A0%94%E5%AD%A6%E6%9C%AF/stft-melscale/stft-melscale/1658890413165.png">
-<meta property="og:image" content="https://www.linshuqing.top/_posts/%E7%A7%91%E7%A0%94%E5%AD%A6%E6%9C%AF/stft-melscale/stft-melscale/1658890572376.png">
-<meta property="og:image" content="https://www.linshuqing.top/_posts/%E7%A7%91%E7%A0%94%E5%AD%A6%E6%9C%AF/stft-melscale/stft-melscale/1658822672171.png">
+<meta property="og:image" content="https://www.linshuqing.top/_posts/stft-melscale/1658904252722.png">
+<meta property="og:image" content="https://www.linshuqing.top/_posts/stft-melscale/1658906639628.png">
+<meta property="og:image" content="https://www.linshuqing.top/_posts/stft-melscale/1658906997678.png">
+<meta property="og:image" content="https://www.linshuqing.top/_posts/stft-melscale/1658888255212.png">
+<meta property="og:image" content="https://www.linshuqing.top/_posts/stft-melscale/1658890413165.png">
+<meta property="og:image" content="https://www.linshuqing.top/stft-melscale/1658890572376.png">
+<meta property="og:image" content="https://www.linshuqing.top/1658822672171.png">
 <meta property="article:published_time" content="2024-10-06T13:23:07.000Z">
-<meta property="article:modified_time" content="2024-10-06T13:31:57.760Z">
+<meta property="article:modified_time" content="2024-10-06T14:00:29.103Z">
 <meta property="article:author" content="Shuqing Lin">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://www.linshuqing.top/_posts/%E7%A7%91%E7%A0%94%E5%AD%A6%E6%9C%AF/stft-melscale/stft-melscale/1658904252722.png">
+<meta name="twitter:image" content="https://www.linshuqing.top/_posts/stft-melscale/1658904252722.png">
   
   
     <meta name="referrer" content="no-referrer-when-downgrade">
@@ -290,7 +290,7 @@
             
               <div class="markdown-body">
                 
-                <h2 id="torch-中的-stft、torchaudio-中的-Spectrogram、Melscale、MelSpectrogram-的使用"><a href="#torch-中的-stft、torchaudio-中的-Spectrogram、Melscale、MelSpectrogram-的使用" class="headerlink" title="torch 中的 stft、torchaudio 中的 Spectrogram、Melscale、MelSpectrogram 的使用"></a>torch 中的 stft、torchaudio 中的 Spectrogram、Melscale、MelSpectrogram 的使用</h2><h3 id="torch-stft"><a href="#torch-stft" class="headerlink" title="torch.stft()"></a>torch.stft()</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">output = torch.stft(<span class="hljs-built_in">input</span>, n_fft, hop_length=<span class="hljs-literal">None</span>, win_length=<span class="hljs-literal">None</span>, window=<span class="hljs-literal">None</span>, center=<span class="hljs-literal">True</span>, pad_mode=<span class="hljs-string">&#x27;reflect&#x27;</span>, normalized=<span class="hljs-literal">False</span>, onesided=<span class="hljs-literal">None</span>, return_complex=<span class="hljs-literal">None</span>)<br></code></pre></td></tr></table></figure>
+                <h3 id="torch-stft"><a href="#torch-stft" class="headerlink" title="torch.stft()"></a>torch.stft()</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs python">output = torch.stft(<span class="hljs-built_in">input</span>, n_fft, hop_length=<span class="hljs-literal">None</span>, win_length=<span class="hljs-literal">None</span>, window=<span class="hljs-literal">None</span>, center=<span class="hljs-literal">True</span>, pad_mode=<span class="hljs-string">&#x27;reflect&#x27;</span>, normalized=<span class="hljs-literal">False</span>, onesided=<span class="hljs-literal">None</span>, return_complex=<span class="hljs-literal">None</span>)<br></code></pre></td></tr></table></figure>
 
 <p><em>简介：短时傅里叶变换</em></p>
 <p>其中：</p>
@@ -369,7 +369,7 @@
 <li>output(Tensor) 返回大小为 $\star \times n_mels \times T$ 的Tensor</li>
 </ul>
 <blockquote>
-<p>这一过程其实就是首先计算一个 $\star \times n_stft \times n_mels$ 的滤波器组矩阵，这个矩阵体现了信号频率 和 mel 域频率之间的转换关系，然后和输入的 Spectrogram 做矩阵乘法：<img src="/_posts/%E7%A7%91%E7%A0%94%E5%AD%A6%E6%9C%AF/stft-melscale/stft-melscale/1658904252722.png" srcset="/img/loading.gif" lazyload alt="1658904252722"><br>最后求得mel域的Spectrogram，即Mel谱。</p>
+<p>这一过程其实就是首先计算一个 $\star \times n_stft \times n_mels$ 的滤波器组矩阵，这个矩阵体现了信号频率 和 mel 域频率之间的转换关系，然后和输入的 Spectrogram 做矩阵乘法：<img src="/_posts/stft-melscale/1658904252722.png" srcset="/img/loading.gif" lazyload alt="1658904252722"><br>最后求得mel域的Spectrogram，即Mel谱。</p>
 </blockquote>
 <blockquote>
 <p>注意：计算Spectrogram的时候不需要采样率，这是因为输出的频率是数字域角频率，而在计算MelScale的时候，需要具体的模拟频率和Mel域频率之间的转换关系，因此需要采样率来求出模拟频率的具体值，最后再转换到Mel域频率。</p>
@@ -405,7 +405,7 @@
 <li>output(Tensor) 输出Mel谱</li>
 </ul>
 <blockquote>
-<p>可以看出，MelSpectrogram的参数完全就是Spectrogram的参数+MelScale的参数。实际上，这个函数的计算过程就是在里面先计算spectrogram再计算mel_scale：<img src="/_posts/%E7%A7%91%E7%A0%94%E5%AD%A6%E6%9C%AF/stft-melscale/stft-melscale/1658906639628.png" srcset="/img/loading.gif" lazyload alt="1658906639628"><br>测试结果也验证了这一点：<img src="/_posts/%E7%A7%91%E7%A0%94%E5%AD%A6%E6%9C%AF/stft-melscale/stft-melscale/1658906997678.png" srcset="/img/loading.gif" lazyload alt="1658906997678"><br>用两种方法计算的mel谱结果完全一样。</p>
+<p>可以看出，MelSpectrogram的参数完全就是Spectrogram的参数+MelScale的参数。实际上，这个函数的计算过程就是在里面先计算spectrogram再计算mel_scale：<img src="/_posts/stft-melscale/1658906639628.png" srcset="/img/loading.gif" lazyload alt="1658906639628"><br>测试结果也验证了这一点：<img src="/_posts/stft-melscale/1658906997678.png" srcset="/img/loading.gif" lazyload alt="1658906997678"><br>用两种方法计算的mel谱结果完全一样。</p>
 </blockquote>
 <h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ol>
 <li>关于信号的能量谱和功率谱（<a target="_blank" rel="noopener" href="https://www.cnblogs.com/sccdlyc/archive/2012/08/13/2637121.html">参考</a>）：</li>
@@ -420,12 +420,12 @@
 <li>关于Spectrogram和stft：</li>
 </ol>
 <ul>
-<li>当 <code>torchaudio.transforms.Spectrogram</code> 网络中的 <code>power=1</code> 时，输出的Spectrogram是能量图，在其他参数完全相同的情况下，其输出结果和 <code>torch.stft</code> 函数中 <code>return_complex=True</code> 的输出再求复数的模值之后的结果相同：<img src="/_posts/%E7%A7%91%E7%A0%94%E5%AD%A6%E6%9C%AF/stft-melscale/stft-melscale/1658888255212.png" srcset="/img/loading.gif" lazyload alt="1658888255212"><br>图中，$x_1$ 是stft函数求模之后的结果，$x_2$ 是直接求Spectrogram得到的结果。</li>
-<li>当 <code>torchaudio.transforms.Spectrogram</code> 网络中的 <code>power=None</code> 时，输出的Spectrogram是sftf的直接结果，在其他参数完全相同的情况下，其输出结果和 <code>torch.stft</code> 函数中 <code>return_complex=True</code>  完全相同：<img src="/_posts/%E7%A7%91%E7%A0%94%E5%AD%A6%E6%9C%AF/stft-melscale/stft-melscale/1658890413165.png" srcset="/img/loading.gif" lazyload alt="1658890413165"><br>图中，$x_1$ 是stft函数之后的结果，$x_2$ 是直接求Spectrogram得到的结果。</li>
-<li>事实上，Spectrogram内部就是调用了stft的计算：<img src="/_posts/%E7%A7%91%E7%A0%94%E5%AD%A6%E6%9C%AF/stft-melscale/stft-melscale/1658890572376.png" srcset="/img/loading.gif" lazyload alt="1658890572376"><br>然后根据 <code>power</code> 取值计算最终的输出。</li>
+<li>当 <code>torchaudio.transforms.Spectrogram</code> 网络中的 <code>power=1</code> 时，输出的Spectrogram是能量图，在其他参数完全相同的情况下，其输出结果和 <code>torch.stft</code> 函数中 <code>return_complex=True</code> 的输出再求复数的模值之后的结果相同：<img src="/_posts/stft-melscale/1658888255212.png" srcset="/img/loading.gif" lazyload alt="1658888255212"><br>图中，$x_1$ 是stft函数求模之后的结果，$x_2$ 是直接求Spectrogram得到的结果。</li>
+<li>当 <code>torchaudio.transforms.Spectrogram</code> 网络中的 <code>power=None</code> 时，输出的Spectrogram是sftf的直接结果，在其他参数完全相同的情况下，其输出结果和 <code>torch.stft</code> 函数中 <code>return_complex=True</code>  完全相同：<img src="/_posts/stft-melscale/1658890413165.png" srcset="/img/loading.gif" lazyload alt="1658890413165"><br>图中，$x_1$ 是stft函数之后的结果，$x_2$ 是直接求Spectrogram得到的结果。</li>
+<li>事实上，Spectrogram内部就是调用了stft的计算：<img src="/./stft-melscale/1658890572376.png" srcset="/img/loading.gif" lazyload alt="1658890572376"><br>然后根据 <code>power</code> 取值计算最终的输出。</li>
 </ul>
 <ol start="3">
-<li>reflect padding : 以矩阵的边界为对称轴，将内部的数据复制到外部：<img src="/_posts/%E7%A7%91%E7%A0%94%E5%AD%A6%E6%9C%AF/stft-melscale/stft-melscale/1658822672171.png" srcset="/img/loading.gif" lazyload alt="1658822672171"></li>
+<li>reflect padding : 以矩阵的边界为对称轴，将内部的数据复制到外部：<img src="/1658822672171.png" srcset="/img/loading.gif" lazyload alt="1658822672171"></li>
 </ol>
 
                 
@@ -466,7 +466,7 @@
   <div class="license-box my-3">
     <div class="license-title">
       <div>torch 中的 stft、torchaudio 中的 Spectrogram、Melscale、MelSpectrogram 的使用</div>
-      <div>https://www.linshuqing.top/2024/10/06/科研学术/stft-melscale/</div>
+      <div>https://www.linshuqing.top/2024/10/06/stft-melscale/</div>
     </div>
     <div class="license-meta">
       
